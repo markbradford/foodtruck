@@ -1,12 +1,61 @@
 var db = require('./models');
 var geocoder = require('geocoder');
+var request = require('request');
+var cheerio = require('cheerio');
+var chalk = require('chalk');
 
-db.truck.create({truckName: "I Love My GFF"})
-.then(function(truckName) {
-  console.log(truckName.get())
+
+request("http://www.seattlefoodtruck.com/index.php/neighborhoods/south-lake-union/", function(error, response, data) {
+
+    // var segregateArray = [];
+    var locationArray = [];
+    var truckArray = [];
+    var timeArray = [];
+
+
+    if (!error && response.statusCode == 200) {
+        var $ = cheerio.load(data);
+
+        $(".entry-content td").each(function(index, element) {
+            var link = $(this).find('a');
+
+            if(link.length > 0){
+               truckArray.push(link.text().trim());
+                //console.log(link.attr('href').trim());
+            }else{
+               locationArray.push($(this).contents().eq(0).text());
+               timeArray.push($(this).contents().eq(2).text());
+            }
+
+            // segregateArray.push($(this).text().trim());
+        });
+
+for (var i = 0; i < truckArray.length; i++) {
+    db.truck.findOrCreate({where: { truckName: truckArray[i] }})
+      .spread(function(truckName, created) {
+      console.log(truckName.get())
+    });
+  };
+
+for (var i = 0; i < locationArray.length; i++) {
+    db.location.findOrCreate({where: { location: locationArray[i] }})
+      .spread(function(address, created) {
+      console.log(truckName.get())
+    });
+  };
+};
+
+return;
+
 });
 
-db.location.create({address: "1016 Republican St, Seattle, WA"})
-.then(function(location) {
-  console.log(location.get())
-});
+
+// db.truck.findOrCreate({where { truckName: 'truckArray[i]' }})
+// .spread(function(truckName, created) {
+//   console.log(truckName.get())
+// });
+
+// db.location.create({address: })
+// .then(function(location) {
+//   console.log(location.get())
+// });
