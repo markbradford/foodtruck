@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <h1>My Points</h1>
+    <div id="map2"></div>
+  </div>
+
+  <script>
+    var myPoints = <%- JSON.stringify(locations) %>;
+    drawMap(myPoints)
+  </script>
+
+<% include ./partials/footer %>
