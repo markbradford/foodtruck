@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 var db = require('./models');
-//var mapsCtrl = require("./controllers/maps");
+var mapsCtrl = require("./controllers/maps");
 
 app.set("view engine", "ejs");
-//app.use("/maps", mapsCtrl);
+app.use("/maps", mapsCtrl);
 
 app.use(express.static(__dirname + "/public"));
 
