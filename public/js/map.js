@@ -16,7 +16,7 @@ var drawMap = function(markers) {
 
    markers.forEach(function(marker) {
     console.log(marker);
-    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(marker.name)
+    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(marker.truckName + " (" + marker.time + ") ")
    })
 
 }
