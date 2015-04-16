@@ -10,8 +10,6 @@
     "dialect": "postgres"
   },
   "production": {
-    "database": "map",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "use_env_variable": "https://seattlefoodtruckfinder.herokuapp.com"
   }
 }
