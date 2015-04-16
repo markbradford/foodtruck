@@ -24,23 +24,4 @@ router.get("/", function(req, res) {
 });
 
 
-
-// router.get('/categories',function(req,res){
-//  if(req.user) {
-//  var user = req.user.id;
-//    db.category.findAll()
-//      .then(function(categories){
-//        db.user.find({where: {id: req.user.id }, include: [db.category] })
-//          .then(function(userData) {
-//          console.log(userData)
-//          console.log('user', user)
-//          // res.send(userData)
-//          res.render('auth/categories', {'categories': categories, 'user': user, 'userData': userData});
-//        })
-//      });
-//  } else {
-//    res.redirect('/auth/signup')
-//  }
-// })
-
 module.exports = router;
