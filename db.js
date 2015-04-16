@@ -21,14 +21,14 @@ request("http://www.seattlefoodtruck.com/index.php/neighborhoods/south-lake-unio
 
             if(link.length > 0){
                truckArray.push(link.text().trim());
-                //console.log(link.attr('href').trim());
+
             }else{
                locationArray.push($(this).contents().eq(0).text());
                timeArray.push($(this).contents().eq(2).text());
             }
-
-            // segregateArray.push($(this).text().trim());
         });
+
+
 
 for (var i = 0; i < truckArray.length; i++) {
     db.truck.findOrCreate({where: { truckName: truckArray[i] }})
@@ -38,24 +38,14 @@ for (var i = 0; i < truckArray.length; i++) {
   };
 
 for (var i = 0; i < locationArray.length; i++) {
-    db.location.findOrCreate({where: { location: locationArray[i] }})
+    db.location.findOrCreate({where: { address: locationArray[i] + ", Seattle, Wa" }})
       .spread(function(address, created) {
-      console.log(truckName.get())
+      console.log(address.get())
     });
   };
+
 };
 
 return;
 
 });
-
-
-// db.truck.findOrCreate({where { truckName: 'truckArray[i]' }})
-// .spread(function(truckName, created) {
-//   console.log(truckName.get())
-// });
-
-// db.location.create({address: })
-// .then(function(location) {
-//   console.log(location.get())
-// });

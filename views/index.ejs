@@ -1,5 +1,6 @@
 <% include ./partials/header %>
 <nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -10,15 +11,30 @@
     <a class="navbar-brand" href="/">SLU Truck Tracker</a>
   </div>
 
+  <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Trucks</a></li>
-      <li><a href="#">About</a></li>
+      <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <a href="/" class="thumbnail">
+          <img src="../public/images/food-truck-icon.jpg" alt="truck">
+        </a>
+      </div> -->
+      <li><a href="#">Show Trucks</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/auth"><h5><strong>Food Truck Login</strong></h5></a></li>
+      <li><a href="#">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search By Day<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Monday</a></li>
+          <li><a href="#">Tuesday</a></li>
+          <li><a href="#">Wednesday</a></li>
+          <li><a href="#">Thursday</a></li>
+          <li><a href="#">Friday</a></li>
+        </ul>
+      </li>
     </ul>
-  </div>
+  </div><!-- /.navbar-collapse -->
 </nav>
 
 <div class="container">
@@ -54,22 +70,6 @@
         <div class="carousel-caption">
           <h3>Cheesy Logo</h3>
           <p>Awesome!</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="img_flower.jpg" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="img_flower2.jpg" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
         </div>
       </div>
 
