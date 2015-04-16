@@ -6,7 +6,8 @@ var drawMap = function(markers) {
       attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
   });
 
-  var map = L.map('map').addLayer(mapboxTiles)
+  var map = L.map('map').addLayer(mapboxTiles);
+            L.control.locate().addTo(map);
 
    if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -16,7 +17,7 @@ var drawMap = function(markers) {
 
    markers.forEach(function(marker) {
     console.log(marker);
-    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(marker.truckName + " (" + marker.time + ") ")
+    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(marker.truckName + " (" + marker.time + ") " + marker.cuisine)
    })
 
 }
