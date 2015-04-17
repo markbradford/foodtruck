@@ -17,7 +17,8 @@ var drawMap = function(markers) {
 
    markers.forEach(function(marker) {
     console.log(marker);
-    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(marker.truckName + " (" + marker.time + ") " + marker.cuisine)
+    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(
+      "<strong>" + marker.truckName + "</strong>" + "<br>" + "<em>" + marker.time + "</em>" + "<br>" + marker.cuisine)
    })
 
 }

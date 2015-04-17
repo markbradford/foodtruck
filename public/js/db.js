@@ -28,6 +28,7 @@ request("http://www.seattlefoodtruck.com/index.php/neighborhoods/south-lake-unio
         });
 
 
+
 for (var i = 0; i < truckArray.length; i++) {
     db.truck.findOrCreate({where: { truckName: truckArray[i] }})
       .spread(function(truckName, created) {

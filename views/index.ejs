@@ -1,18 +1,76 @@
 <% include ./partials/header %>
 
+<header class="bar bar-nav">
+    <h1 class="title">Seattle Food Truck Finder</h1>
+</header>
 
+<div class="content">
 
-<div class="well" align="center">
-      <a class="btn btn-success btn-sm" href="/maps">Go to the Map</a>
+      <p class="content-padded">Welcome to the Seattle Food Truck Finder!  We hope you enjoy our site.  </p>
+
+<div class="slider" id="mySlider">
+  <div class="slide-group">
+    <div class="slide">
+      <img src="/images/images-1.jpg">
+    </div>
+    <div class="slide">
+      <img src="/images/images.jpg">
+    </div>
+    <div class="slide">
+      <img src="/images/cheese-wizards-seattle-1.jpeg">
+    </div>
+    <div class="slide">
+      <img src="/images/imgres.jpg">
+    </div>
   </div>
 </div>
 
 
 
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">
+            <a class="push-right" href="/maps" data-transition="fade" data-ignore="push">
+              <strong>Go To The Map!</strong>
+            </a>
+          </li>
+          <li class="table-view-cell">
+            <a class="push-right" href="/trucks">
+              <strong>Check Out The Trucks</strong>
+            </a>
+          </li>
+          <li class="table-view-cell">
+            <a class="push-right" href="/auth">
+              <strong>Vendors Log-In</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-  <script>
-    var myPoints = <%- JSON.stringify(locations) %>;
-    drawMap(myPoints)
-  </script>
+     <nav class="bar bar-tab">
+  <a class="tab-item active" href="/" data-ignore="push" data-transition="fade">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">Home</span>
+  </a>
+  <a class="tab-item" href="/maps" data-ignore="push" data-transition="fade">
+    <span class="icon icon-star-filled"></span>
+    <span class="tab-label">Map</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-refresh"></span>
+    <span class="tab-label">Refresh</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-bars"></span>
+    <span class="tab-label">Filter</span>
+  </a>
+</nav>
+
+
+    <script>
+  //   var myPoints = <%- JSON.stringify(locations) %>;
+  //   drawMap(myPoints)
+  // </script>
 
 <% include ./partials/footer %>
