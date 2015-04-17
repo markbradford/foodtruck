@@ -19,14 +19,13 @@ router.post('/login',function(req,res){
                 if(err) throw err;
 
                 if(result){
-                    //store user to session!!
                     req.session.user={
                         id:user.id,
                         email:user.email,
                         name:user.name
                     };
                     req.flash('success','You have been logged in.');
-                    res.redirect('/');
+                    res.redirect('/logins');
                 }else{
                     req.flash('danger','Invalid password.');
                     res.redirect('/auth/login');
@@ -71,9 +70,6 @@ router.post('/signup',function(req,res){
         }
 
     }).catch(function(error){
-        //NOT COVERED IN CLASS
-        //handle validation errors and create flash
-        //messages
         if(error){
             if(Array.isArray(error.errors)){
                 error.errors.forEach(function(errorItem){
@@ -91,10 +87,8 @@ router.post('/signup',function(req,res){
     })
 
 
-    //do sign up here (add user to database)
     // res.send(req.body);
-    //user is signed up forward them to the home page
-    // res.redirect('/');
+    res.redirect('/logins');
 });
 
 //GET /auth/logout
