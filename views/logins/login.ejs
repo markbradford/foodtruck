@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 
 <div>
-<h1>Truck Check-In</h1>
+<h1>Vendor Check-In</h1>
 
 <% include ../partials/alerts.ejs %>
 
@@ -10,12 +10,15 @@ Hello, <b><%= typeof user.name === 'string' ? user.name : 'Unknown' %></b>.
 <a href="/auth/logout">logout!!</a>
 <% } %>
 <hr>
+ <p>Current Truck Owners - Please Login Before Updating</p>
 <a href="/auth/login" class="btn btn-primary">Login</a>
 <br>
 <br>
-<a href="/restricted" class="btn btn-negative">Update Location</a>
+<p>Update Current Truck Locations (Vendors Only)</p>
+<a href="/restricted" class="btn btn-negative">Update</a>
 <br>
 <br>
+<p>New Users - Please Sign Up For a New Account</p>
 <a href="/auth/signup" class="btn btn-positive">Signup</a>
 
 
