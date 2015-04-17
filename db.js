@@ -7,7 +7,6 @@ var chalk = require('chalk');
 
 request("http://www.seattlefoodtruck.com/index.php/neighborhoods/south-lake-union/", function(error, response, data) {
 
-    // var segregateArray = [];
     var locationArray = [];
     var truckArray = [];
     var timeArray = [];
@@ -27,7 +26,6 @@ request("http://www.seattlefoodtruck.com/index.php/neighborhoods/south-lake-unio
                timeArray.push($(this).contents().eq(2).text());
             }
         });
-
 
 
 for (var i = 0; i < truckArray.length; i++) {

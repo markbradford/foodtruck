@@ -1,28 +1,38 @@
 <% include ../partials/header %>
+
+
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.css' rel='stylesheet' />
 
-<style>
-.leaflet-control-locate {
-  border:1px solid rgba(0,0,0,0.4);
-  }
-.leaflet-control-locate a {
-  background-color:#fff;
-  background-position:-3px, -2px;
-  }
-.leaflet-control-locate.active a {
-  background-position:-33px -2px;
-  }
-</style>
-
-    <div id="map" style="height: 400px">
-
+<div class="content">
+    <div id="map" style="height: 100%">
     </div>
+</div>
+
+    <nav class="bar bar-tab">
+  <a class="tab-item active" href="/" data-ignore="push" data-transition="fade">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">Home</span>
+  </a>
+  <a class="tab-item" href="/maps" data-ignore="push" data-transition="fade">
+    <span class="icon icon-star-filled"></span>
+    <span class="tab-label">Map</span>
+  </a>
+  <a class="tab-item" href="/maps" data-ignore="push" data-transition="fade">
+    <span class="icon icon-refresh"></span>
+    <span class="tab-label">Refresh</span>
+  </a>
+  <a class="tab-item" href="/logins">
+    <span class="icon icon-bars"></span>
+    <span class="tab-label">Vendor Login</span>
+  </a>
+</nav>
 
 <script>
     var myPoints = <%- JSON.stringify(locations) %>;
     drawMap(myPoints);
 </script>
+
 
 
 <% include ../partials/footer %>

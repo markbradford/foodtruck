@@ -7,3 +7,23 @@
 h3 {
   text-align: center;
 }
+
+.leaflet-control-locate {
+  border:1px solid rgba(0,0,0,0.4);
+  }
+.leaflet-control-locate a {
+  background-color:#fff;
+  background-position:-3px, -2px;
+  }
+.leaflet-control-locate.active a {
+  background-position:-33px -2px;
+  }
+
+.slide{
+  text-align: center;
+}
+.slide img {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
