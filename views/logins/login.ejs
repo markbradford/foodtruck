@@ -1,45 +1,45 @@
 <% include ../partials/header %>
 
-<div>
-<h1>Welcome Vendors!</h1>
+    <div>
+        <h1>Welcome Vendors!</h1>
 
-<% include ../partials/alerts.ejs %>
+        <% include ../partials/alerts.ejs %>
 
-<% if(user) { %>
-Hello, <b><%= typeof user.name === 'string' ? user.name : 'Unknown' %></b>.
-<a href="/auth/logout">logout!!</a>
-<% } %>
-<hr>
- <p>Current Truck Owners - Please Login Before Updating</p>
-<a href="/auth/login" class="btn btn-primary">Login</a>
-<br>
-<br>
-<p>Update Current Truck Locations (Vendors Only)</p>
-<a href="/restricted" class="btn btn-negative">Update</a>
-<br>
-<br>
-<p>New Users - Please Sign Up For a New Account</p>
-<a href="/auth/signup" class="btn btn-positive">Signup</a>
-
-
-<nav class="bar bar-tab">
-  <a class="tab-item active" href="/" data-ignore="push" data-transition="fade">
-    <span class="icon icon-home"></span>
-    <span class="tab-label">Home</span>
-  </a>
-  <a class="tab-item" href="/maps" data-ignore="push" data-transition="fade">
-    <span class="icon icon-star-filled"></span>
-    <span class="tab-label">Map</span>
-  </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-refresh"></span>
-    <span class="tab-label">Refresh</span>
-  </a>
-  <a class="tab-item" href="/logins">
-    <span class="icon icon-bars"></span>
-    <span class="tab-label">Vendor Login</span>
-  </a>
-</nav>
+            <% if(user) { %>
+                Hello, <b><%= typeof user.name === 'string' ? user.name : 'Unknown' %></b>.
+                <a href="/auth/logout">logout!!</a>
+                <% } %>
+                    <hr>
+                    <p>Current Truck Owners - Please Login Before Updating</p>
+                    <a href="/auth/login" class="btn btn-primary" data-ignore="push" data-transition="fade">Login</a>
+                    <br>
+                    <br>
+                    <p>Update Current Truck Locations (Vendors Only)</p>
+                    <a href="/restricted" class="btn btn-negative" data-ignore="push" data-transition="fade">Update</a>
+                    <br>
+                    <br>
+                    <p>New Users - Please Sign Up For a New Account</p>
+                    <a href="/auth/signup" class="btn btn-positive" data-ignore="push" data-transition="fade">Signup</a>
 
 
-<% include ../partials/footer %>
+                    <nav class="bar bar-tab">
+                        <a class="tab-item active" href="/" data-ignore="push" data-transition="fade">
+                            <span class="icon icon-home"></span>
+                            <span class="tab-label">Home</span>
+                        </a>
+                        <a class="tab-item" href="/maps" data-ignore="push" data-transition="fade">
+                            <span class="icon icon-star-filled"></span>
+                            <span class="tab-label">Map</span>
+                        </a>
+                        <a class="tab-item" href="/logins">
+                            <span class="icon icon-refresh"></span>
+                            <span class="tab-label">Refresh</span>
+                        </a>
+                        <a class="tab-item" href="/logins">
+                            <span class="icon icon-bars"></span>
+                            <span class="tab-label">Vendor Login</span>
+                        </a>
+                    </nav>
+
+
+                    <% include ../partials/footer %>

@@ -1,48 +1,48 @@
 <% include ../partials/header.ejs %>
 
-<div>
-    <h1 align="center">Account Login</h1>
-    <hr>
-</div>
-<form class="input-group">
-  <div class="input-row">
-    <% include ../partials/alerts.ejs %>
-  <form class="form" method="post" action="/auth/login">
-    <label>E-mail</label>
-    <input type="email" placeholder="Enter your e-mail">
-  </div>
-  <div class="input-row">
-    <label>Password</label>
-    <input type="password" placeholder="Enter your password">
-  </div>
-  <button class="btn btn-primary">Login</button>
-  <br>
-  </form>
-  <hr>
-  <a href="/auth/signup" data-transition="fade" data-ignore="push" class="btn btn-positive">Signup For an Account</a>
-  <br>
-  <hr>
+    <div>
+        <h1 align="center">Account Login</h1>
+        <hr>
+    </div>
+    <form class="input-group">
+        <div class="input-row">
+            <% include ../partials/alerts.ejs %>
+                <form class="form" method="post" action="/auth/login">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="Enter your e-mail">
+        </div>
+        <div class="input-row">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+        </div>
+        <button class="btn btn-primary">Login</button>
+        <br>
+        </form>
+        <hr>
+        <a href="/auth/signup" data-transition="fade" data-ignore="push" class="btn btn-positive">Signup For an Account</a>
+        <br>
+        <hr>
 
-</form>
+    </form>
 
 
-<nav class="bar bar-tab">
-  <a class="tab-item active" href="/" data-ignore="push" data-transition="fade">
-    <span class="icon icon-home"></span>
-    <span class="tab-label">Home</span>
-  </a>
-  <a class="tab-item" href="/maps" data-ignore="push" data-transition="fade">
-    <span class="icon icon-star-filled"></span>
-    <span class="tab-label">Map</span>
-  </a>
-  <a class="tab-item" href="/auth">
-    <span class="icon icon-refresh"></span>
-    <span class="tab-label">Refresh</span>
-  </a>
-  <a class="tab-item" href="/logins">
-    <span class="icon icon-bars"></span>
-    <span class="tab-label">Vendor Login</span>
-  </a>
-</nav>
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="/" data-ignore="push" data-transition="fade">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a class="tab-item" href="/maps" data-ignore="push" data-transition="fade">
+            <span class="icon icon-star-filled"></span>
+            <span class="tab-label">Map</span>
+        </a>
+        <a class="tab-item" href="/auth">
+            <span class="icon icon-refresh"></span>
+            <span class="tab-label">Refresh</span>
+        </a>
+        <a class="tab-item" href="/logins">
+            <span class="icon icon-bars"></span>
+            <span class="tab-label">Vendor Login</span>
+        </a>
+    </nav>
 
-<% include ../partials/footer.ejs %>
+    <% include ../partials/footer.ejs %>

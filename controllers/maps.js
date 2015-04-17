@@ -24,18 +24,5 @@ router.get("/", function(req, res) {
 });
 
 
-// router.get("/:id", function(req, res) {
-//     var dayOfWeek  = req.query.q;
-
-
-//     var queryString = 'select * from trucks,locations,DOW where trucks.id=DOW."truckID" and locations.id=DOW."locationID";'.replace(/DOW/g, dayOfWeek)
-
-//     db.sequelize.query(queryString).spread(function(results, metadata) {
-//           res.render("maps/map", {locations: results});
-
-//     });
-
-// });
-
 
 module.exports = router;
