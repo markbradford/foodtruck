@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 var db = require('../models')
 
-var days = ["mondays", "tuesdays", "wednesdays", "thursdays", "fridays"]
+var days = ["sundays", "mondays", "tuesdays", "wednesdays", "thursdays", "fridays", "saturdays"]
 
 router.get("/", function(req, res) {
     var d = new Date();
